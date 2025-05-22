@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WiFi</title>
+  <style>
+    body, html {
+      margin: 0;
+      text-align: center;
+      padding-top:  200px;;
+      height: 100%;
+      background-color: #1d245b;
+    }
+    
+    .service-button {
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      font-size: 18px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+    }
+     #popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+     }
+     #popup video {
+      width: 80%;
+    }
+     #popup button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+     <img src="C:\Users\HP Temp\Documents\services\images\New_LOGO_2024.png" alt="company logo" width="100" />
+     <h1></h1>
+<button class="service-button" onclick="document.getElementById('popup').style.display='flex'"> Women </button>
+<div id="popup" onclick="this.style.display='none'">
+    <video controls autoplay>
+      <source src="C:\Users\HP Temp\Documents\services\videos\womenWash.mp4" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+<button class="service-button" onclick="document.getElementById('popup').style.display='flex'"> Men </button>
+<div id="popup" onclick="this.style.display='none'">
+    <video controls autoplay>
+      <source src="C:\Users\HP Temp\Documents\services\videos\menwash.mp4" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+</body>
+</html>
